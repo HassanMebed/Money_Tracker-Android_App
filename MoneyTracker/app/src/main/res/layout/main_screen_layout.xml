@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFF0"
+    tools:context=".views.MainScreenActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFF0"
+            android:drawableLeft="@drawable/search_icon"
+            android:drawableStart="@drawable/search_icon"
+            android:drawablePadding="22dp"
+            android:onClick="onSearchForItem"
+            android:gravity="left|center"
+            android:hint="Find a specific item"
+            android:textColorHint="#A9A9A9"
+            android:padding="16dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:minHeight="0dp"
+            android:minWidth="0dp"
+            android:drawableLeft="@drawable/edit_icon"
+            android:drawableStart="@drawable/edit_icon"
+            android:onClick="onManageCategories"
+            android:text="Manage Categories"
+            android:textColor="#FFFFF0" />
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tabs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="?attr/colorPrimary" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="android.support.design.widget.AppBarLayout$ScrollingViewBehavior" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        android:onClick="onAddItem"
+        android:src="@drawable/add_icon_fab" />
+
+</android.support.design.widget.CoordinatorLayout>

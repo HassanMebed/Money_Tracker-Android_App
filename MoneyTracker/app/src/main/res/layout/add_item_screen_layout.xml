@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="?attr/colorPrimary"
+    android:gravity="center"
+    tools:context=".views.AddItemActivity">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:id="@+id/scrollView2"
+            android:layout_width="wrap_content"
+            android:layout_height="450dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="64dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:fadeScrollbars="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:id="@+id/fieldsContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:text="Select Item's Category:"
+                    android:textColor="#FFFFF0" />
+
+                <Spinner
+                    android:id="@+id/selection"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginBottom="25dp"
+                    android:spinnerMode="dropdown"
+                    android:popupBackground="#2F4F4F" />
+
+                <LinearLayout
+                    android:id="@+id/itemInputField"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="25dp"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/itemName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="Item's Name"
+                        android:inputType="textPersonName"
+                        android:textColor="#FFFFF0"
+                        android:textColorHint="#E8E8E8" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/itemDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="25dp"
+                    android:ems="10"
+                    android:gravity="start|top"
+                    android:hint="Details (Optional)"
+                    android:textStyle="italic"
+                    android:inputType="textMultiLine"
+                    android:textColor="#FFFFF0"
+                    android:textColorHint="#E8E8E8" />
+
+                <LinearLayout
+                    android:id="@+id/costInputField"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="25dp"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/itemCost"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="Item's Cost"
+                        android:textStyle="bold"
+                        android:inputType="numberDecimal"
+                        android:textColor="#FFFFF0"
+                        android:textColorHint="#E8E8E8" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/divider1"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="#FFFFF0" />
+
+                <ImageView
+                    android:id="@+id/itemImage"
+                    android:layout_width="75dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitXY"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:onClick="openCamera"
+                    app:srcCompat="@drawable/add_photo_icon"
+                    tools:ignore="VectorDrawableCompat" />
+
+            </LinearLayout>
+        </ScrollView>
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="28dp"
+            android:onClick="onSubmit"
+            android:text="ADD"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent" />
+    </android.support.constraint.ConstraintLayout>
+</RelativeLayout>

@@ -1,0 +1,17 @@
+Index: app/build.gradle
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/build.gradle	(date 1558184028440)
++++ app/build.gradle	(date 1558184028440)
+@@ -29,4 +29,8 @@
+     testImplementation 'junit:junit:4.12'
+     androidTestImplementation 'com.android.support.test:runner:1.0.2'
+     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
++}
++
++repositories {
++    maven { url 'https://jitpack.io' }
+ }
+\ No newline at end of file
